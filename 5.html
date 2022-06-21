@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
 
 
-<title>Artes & Vendas</title>
+<title>Artes & Vendasx</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;900&display=swap" rel="stylesheet">
 
@@ -268,10 +268,10 @@ conteúdo
 
 <div id="rodape" style="width:100%; height: 10px; color: #FFF; font-size: 12px; opacity: 0.1; margin-top: 40px; margin-bottom:20px;"><p style="display: none;">Este site não faz parte do site do Facebook ou do Facebook Inc. <br>Além disso, este site não é endossado pelo Facebook de nenhuma maneira. Facebook é uma marca comercial independente da Facebook, Inc. Política de Privacidade | Termos de Uso</p> Copyright © <span id="year"></span></div>
 
-
-
-<!-- cookie já visitou -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
  <script>
     $(document).ready(function () {
 // mostra o checkout se o cookie ja existe, se ja foi visitado
@@ -286,7 +286,7 @@ conteúdo
 
 
 <!-- DELAY -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <script>
 $('.delay').hide();
         setTimeout(function () {
@@ -314,6 +314,7 @@ let LINKCHECKOUT = "https://pay.kiwify.com.br/jhumsuN";
 let url_string = window.location.href; 
 let url = new URL(url_string); console.log(url_string); 
 let src = url.searchParams.get("src"); console.log(src); // pega o src de onde está vindo e passa pro checkout
+
 // let name = url.searchParams.get("name"); console.log(name); 
 // let email = url.searchParams.get("email"); console.log(email);
 
@@ -325,6 +326,7 @@ else {
 let myURL = LINKCHECKOUT+"?src="+src; console.log(myURL);
 iframecheckout.href = myURL;
 }
+
 </script>
 
 
