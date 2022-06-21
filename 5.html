@@ -9,12 +9,7 @@
 <meta property="og:description" content="Acesse Aqui"/>
 
 <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
-
-
-<link rel="preconnect" href="https://pay.kiwify.com.br/jhumsuN" />
-<link rel="dns-prefetch" href="https://pay.kiwify.com.br/jhumsuN" />
-<link rel="prerender" href="https://pay.kiwify.com.br/jhumsuN" />
-
+<link id="prerender" rel="prerender"/>
 
 <title>Artes & Vendass</title>
 
@@ -304,16 +299,20 @@ $('.delay').hide();
                         }, 2000);
                     }, 3000);
 
-        }, 1 * 1000); // TEMPORIZADOR SEGUNDOS * 1000 190
+        }, 193 * 1000); // TEMPORIZADOR SEGUNDOS * 1000
 
  </script>
 
 <script> // PASSA O SRC PRA URL NO IFRAME DO CHECKOUT na guia anonima nao vai
 let iframecheckout = document.getElementById("iframecheckout"); 
 
+let prerender = document.getElementById("prerender"); 
 
-let LINKCHECKOUT = "https://pay.kiwify.com.br/jhumsuN"; 
 
+let LINKCHECKOUT = "https://pay.kiwify.com.br/jhumsuN";  // LINK DO CHECKOUT
+
+
+prerender.href = LINKCHECKOUT;
 
 let url_string = window.location.href; 
 let url = new URL(url_string); console.log(url_string); 
