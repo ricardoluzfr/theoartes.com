@@ -1,0 +1,29 @@
+<a href='https://google.com'>asda</a>
+
+<script>
+  const mainHost = new URL(window.location);
+  const mainQs = Object.fromEntries(mainHost.searchParams);
+  const navLinks = document.querySelectorAll('a');
+
+  const pagePriority = false;
+
+  if (mainQs && navLinks) {
+    navLinks.forEach((item) => {
+      let navUrl = false;
+      try { navUrl = new URL(item.href); } catch (error) { navUrl = false; }
+
+      if (navUrl) {
+        const navQs = Object.fromEntries(navUrl.searchParams);
+        let newQs = { ...navQs, ...mainQs };
+        if (pagePriority) { newQs = { ...mainQs, ...navQs }; }
+
+        navUrl.search = new URLSearchParams(newQs);
+        item.href = navUrl.href;
+      }
+    });
+  }
+</script>
+
+<script>
+        if (item.href.match(/#value/i)) { item.href = navUrl.href;; }
+</script>
