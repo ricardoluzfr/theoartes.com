@@ -227,7 +227,7 @@ font-size: 16;
 
 
 <div class="titulo">
-   Faça 10X mais dinheiro com 1 simples projeto que<span class="gradiente"> já faz parte de você!</span>
+   Faça 10X mais dinheiro com 1 simples projeto que<span class="gradiente"> já faz parte de você!.</span>
 </div>
 
 
@@ -294,7 +294,11 @@ conteúdo
     </div>
 -->
 
-<div id="rodape" style="width:100%; height: 10px; color: #FFF; font-size: 12px; opacity: 0.1; margin-top: 40px; margin-bottom:20px;"><p style="display: none;">Este site não faz parte do site do Facebook ou do Facebook Inc. <br>Além disso, este site não é endossado pelo Facebook de nenhuma maneira. Facebook é uma marca comercial independente da Facebook, Inc. Política de Privacidade | Termos de Uso</p> Copyright © <span id="year"></span></div>
+<div id="rodape" style="width:100%; height: 10px; color: #FFF; font-size: 12px; opacity: 0.1; margin-top: 40px; margin-bottom:20px;">
+   
+   <p style="display: none;">Este site não faz parte do site do Facebook ou do Facebook Inc. <br>Além disso, este site não é endossado pelo Facebook de nenhuma maneira. Facebook é uma marca comercial independente da Facebook, Inc. Política de Privacidade | Termos de Uso</p> 
+   
+   <p class='ocultar'> Copyright © <span id="year"></span></p></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
@@ -324,11 +328,12 @@ $('.delay').hide();
                     let blink = window.setInterval(function() {
                         document.title = tituloOriginal
                         setTimeout(function() {
-                            document.title = "(1) Nova Mensagem"
+                            document.title = "(1) Nova Mensagem"                           
+                                       $('.ocultar').hide();   
                         }, 2000);
                     }, 3000);
 
-        }, 180 * 1000); // TEMPORIZADOR SEGUNDOS * 1000 | 193
+        }, 1 * 1000); // TEMPORIZADOR SEGUNDOS * 1000 | 193
 
  </script>
 
